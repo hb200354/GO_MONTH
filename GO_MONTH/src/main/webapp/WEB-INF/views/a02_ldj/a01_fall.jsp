@@ -16,8 +16,11 @@
 <meta charset="UTF-8">
     <title>가을 여행지 - 4계절 여행</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="${path}/css/styles.css" rel="stylesheet">
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	
+	<!-- 공통 CSS -->
+	<link href="${path}/css/styles.css" rel="stylesheet">
 
 </head>
 <body>
@@ -61,7 +64,7 @@
 
             <!-- Featured travel -->
             <div class="card mb-4">
-                <a href="#"><img class="card-img-top" src="${path}/assets/images/fall-main.jpg" alt="가을 여행 메인" /></a>
+                <a href="#"><img class="card-img-top" src="${path}/imgs/fall-main.jpg" alt="가을 여행 메인" /></a>
                 <div class="card-body">
                     <div class="small text-muted">AUTUMN PICK</div>
                     <h2 class="card-title">내장산 국립공원</h2>
@@ -78,7 +81,7 @@
                 <div class="col-lg-6">
 
                     <div class="card mb-4">
-                        <a href="#"><img class="card-img-top" src="${path}/assets/images/fall1.jpg" alt="가을 여행지" /></a>
+                        <a href="#"><img class="card-img-top" src="${path}/imgs/fall1.jpg" alt="가을 여행지" /></a>
                         <div class="card-body">
                             <div class="small text-muted">가을 트레킹</div>
                             <h2 class="card-title h4">담양 메타세쿼이아길</h2>
@@ -91,7 +94,7 @@
                     </div>
 
                     <div class="card mb-4">
-                        <a href="#"><img class="card-img-top" src="${path}/assets/images/fall2.jpg" alt="가을 여행지" /></a>
+                        <a href="#"><img class="card-img-top" src="${path}/imgs/fall2.jpg" alt="가을 여행지" /></a>
                         <div class="card-body">
                             <div class="small text-muted">감성 여행</div>
                             <h2 class="card-title h4">강릉 안반데기</h2>
@@ -108,7 +111,7 @@
                 <div class="col-lg-6">
 
                     <div class="card mb-4">
-                        <a href="#"><img class="card-img-top" src="${path}/assets/images/fall3.jpg" alt="가을 여행지" /></a>
+                        <a href="#"><img class="card-img-top" src="${path}/imgs/fall3.jpg" alt="가을 여행지" /></a>
                         <div class="card-body">
                             <div class="small text-muted">단풍 명소</div>
                             <h2 class="card-title h4">설악산</h2>
@@ -121,7 +124,7 @@
                     </div>
 
                     <div class="card mb-4">
-                        <a href="#"><img class="card-img-top" src="${path}/assets/images/fall4.jpg" alt="가을 여행지" /></a>
+                        <a href="#"><img class="card-img-top" src="${path}/imgs/fall4.jpg" alt="가을 여행지" /></a>
                         <div class="card-body">
                             <div class="small text-muted">힐링 여행</div>
                             <h2 class="card-title h4">제주 오름</h2>
