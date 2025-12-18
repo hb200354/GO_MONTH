@@ -1,4 +1,4 @@
-package web.com.prj04.a02_mvc;
+package web.com.go_month.a02_mvc;
 
 
 public class Dept {

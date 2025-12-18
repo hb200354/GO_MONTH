@@ -1,4 +1,4 @@
-package web.com.prj04;
+package web.com.go_month;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

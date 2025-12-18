@@ -1,4 +1,4 @@
-package web.com.prj04.a02_mvc;
+package web.com.go_month.a02_mvc;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
