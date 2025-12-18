@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>사이트 소개 | GO-MONTH</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- 공통 CSS -->
+  <link href="../css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- =======================
+ ① 네비게이션 바
+======================= -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark position-relative">
+  <div class="container">
+
+    <!-- 로고 -->
+    <a class="navbar-brand fw-bold" href="index.html">GO-MONTH</a>
+
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- 중앙 네비 -->
+    <div class="collapse navbar-collapse justify-content-center"
+         id="navbarSupportedContent">
+      <ul class="navbar-nav position-lg-absolute start-50 translate-middle-x">
+        <li class="nav-item"><a class="nav-link" href="spring.html">봄</a></li>
+        <li class="nav-item"><a class="nav-link" href="summer.html">여름</a></li>
+        <li class="nav-item"><a class="nav-link" href="fall.html">가을</a></li>
+        <li class="nav-item"><a class="nav-link" href="winter.html">겨울</a></li>
+      </ul>
+    </div>
+
+    <!-- 로그인 -->
+    <div class="d-none d-lg-block" id="authArea">
+      <a class="btn btn-outline-light btn-login" href="login.html">로그인</a>
+</div>
+
+    </div>
+
+  </div>
+</nav>
+
+<!-- =======================
+ ② 사이트 소개 섹션
+======================= -->
+<section class="py-5 about-section">
+  <div class="container">
+
+    <!-- 페이지 제목 -->
+    <h1 class="text-center fw-bolder mb-5">사이트 소개</h1>
+
+    <!-- 소개 박스 -->
+    <div class="mx-auto p-5 bg-light border rounded about-box">
+
+      <!-- 사이트 소개 -->
+      <h4 class="fw-bold mb-3">🌿 사이트 소개</h4>
+      <p>
+        <strong>GO-MONTH</strong>는 계절과 월(Month)을 기준으로 여행지를 큐레이션하여 제공하는
+        계절 기반 여행 가이드 웹 서비스입니다.
+      </p>
+      <p>
+        같은 장소라도 계절에 따라 전혀 다른 풍경과 분위기를 가지는 점에 착안하여,
+        사용자가 여행 시기에 가장 어울리는 여행지를 한눈에 확인할 수 있도록 설계되었습니다.
+        복잡한 검색 과정 없이도 계절별로 정리된 여행 정보를 직관적으로 탐색할 수 있습니다.
+      </p>
+
+      <hr class="my-4">
+
+      <!-- 기획 의도 -->
+      <h4 class="fw-bold mb-3">🧭 기획 의도</h4>
+      <p>
+        여행을 계획할 때 많은 사람들이
+        “지금 이 계절에 어디를 가는 것이 좋을까?”라는 고민을 하게 됩니다.
+      </p>
+      <p>
+        GO-MONTH는 이러한 사용자 니즈를 바탕으로 여행지를
+        <strong>계절 중심으로 분류</strong>하여,
+        시기에 맞는 여행지를 보다 쉽고 효율적으로 선택할 수 있도록 돕는 것을 목표로 기획되었습니다.
+      </p>
+
+      <hr class="my-4">
+
+      <!-- 사이트 구성 -->
+      <h4 class="fw-bold mb-3">🗂 사이트 구성</h4>
+      <ul>
+        <li>봄 · 여름 · 가을 · 겨울 계절별 여행 페이지 제공</li>
+        <li>계절별 추천 여행지를 카드 형태로 시각화</li>
+        <li>여행지별 간단한 설명과 여행 팁 제공</li>
+        <li>대표 여행지를 통한 계절별 핵심 콘텐츠 강조</li>
+      </ul>
+      <p>
+        모든 페이지는 동일한 UI 구조를 유지하여
+        사용자가 계절을 이동하더라도 일관된 사용 경험을 할 수 있도록 설계되었습니다.
+      </p>
+
+      <hr class="my-4">
+
+      <!-- 회원 기능 -->
+      <h4 class="fw-bold mb-3">🔐 회원 기능 안내</h4>
+      <p>
+        GO-MONTH는 향후 서비스 확장을 고려하여
+        회원 기능을 포함한 구조로 설계되었습니다.
+      </p>
+      <p>
+        로그인한 사용자는 관심 있는 여행지를 저장하거나,
+        개인화된 여행 정보를 보다 편리하게 확인할 수 있도록 확장될 예정입니다.
+        현재는 프론트엔드 중심으로 구현되어 있으며,
+        추후 백엔드 연동을 고려한 구조를 갖추고 있습니다.
+      </p>
+
+      <hr class="my-4">
+
+      <!-- 사용 기술 -->
+      <h4 class="fw-bold mb-3">🛠 사용 기술</h4>
+      <ul class="mb-0">
+        <li>HTML / CSS</li>
+        <li>Bootstrap 5</li>
+        <li>JavaScript (추후 기능 확장 고려)</li>
+      </ul>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- =======================
+ ③ 푸터
+======================= -->
+<footer class="py-5 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white">
+      Copyright © GO-MONTH 2025
+    </p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/scripts.js"></script>
+
+</body>
+</html>

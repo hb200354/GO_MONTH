@@ -1,0 +1,61 @@
+@charset "UTF-8";
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* 버튼 스타일링을 위한 CSS (선택 사항) */
+.month-button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #008CBA; /* 파란색 배경 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.month-button:hover {
+    background-color: #005f7a;
+}
+#result {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+.gallery-container {
+    display: grid; /* Grid 레이아웃 활성화 */
+    /* 2개의 열(column)을 생성하며, 각각의 너비를 동일하게(1fr) 설정 */
+    grid-template-columns: 1fr 1fr; 
+    /* grid-template-columns: repeat(2, 1fr); 과 동일한 표현 */
+    
+    gap: 20px; /* 이미지(그리드 셀) 사이의 간격 설정 */
+    
+    max-width: 800px; /* 갤러리 전체의 최대 너비를 설정하여 가운데 정렬 용이 */
+    margin: 0 auto; /* 갤러리를 페이지 중앙에 배치 */
+    padding: 20px;
+}
+
+.gallery-item img {
+    width: 100%; /* 이미지가 부모 컨테이너(gallery-item) 너비에 꽉 차도록 설정 */
+    height: auto; /* 이미지의 원본 가로세로 비율을 유지 */
+    border-radius: 8px; /* 이미지 모서리를 둥글게 처리 */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 이미지에 은은한 그림자 추가 */
+    display: block; /* 이미지를 블록 레벨 요소로 만들어 불필요한 공백 제거 */
+}
+
+/* 추가: 반응형 디자인을 위한 미디어 쿼리 */
+@media (max-width: 600px) {
+    .gallery-container {
+        grid-template-columns: 1fr; /* 화면 너비가 600px 이하일 때는 1열로 변경 */
+    }
+}
