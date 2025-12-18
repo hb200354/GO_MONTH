@@ -42,6 +42,7 @@
         <li class="nav-item"><a class="nav-link active" href="${path}/summer">여름</a></li>
         <li class="nav-item"><a class="nav-link" href="${path}/fall">가을</a></li>
         <li class="nav-item"><a class="nav-link" href="${path}/winter">겨울</a></li>
+        
       </ul>
     </div>
 
@@ -125,9 +126,10 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <!-- =======================
- JS (더미 데이터)
+ JS (월별 + 검색)
 ======================= -->
 <script>
+/* ===== 데이터 ===== */
 const monthData = {
   6: [
     { id: "gangneung", title: "강릉 경포대", img: "${path}/imgs/summer-main.jpg", desc: "6월 대표 바다 여행지" }
@@ -140,11 +142,31 @@ const monthData = {
   ]
 };
 
+const allPlaces = [
+  ...monthData[6],
+  ...monthData[7],
+  ...monthData[8]
+];
+
+/* ===== 요소 ===== */
 const placeList = document.getElementById("placeList");
 const buttons = document.querySelectorAll(".btn-month");
+const searchInput = document.getElementById("searchInput");
+const searchBtn = document.getElementById("searchBtn");
 
+/* ===== 렌더링 ===== */
 function renderList(list) {
   placeList.innerHTML = "";
+
+  if (list.length === 0) {
+    placeList.innerHTML = `
+      <div class="col-12 text-center py-5">
+        <p class="text-muted">검색 결과가 없습니다.</p>
+      </div>
+    `;
+    return;
+  }
+
   list.forEach(place => {
     placeList.innerHTML += `
       <div class="col-lg-6 mb-4">
@@ -163,6 +185,7 @@ function renderList(list) {
   });
 }
 
+/* ===== 월별 버튼 ===== */
 buttons.forEach(btn => {
   btn.addEventListener("click", () => {
     buttons.forEach(b => b.classList.replace("btn-dark","btn-outline-dark"));
@@ -171,6 +194,29 @@ buttons.forEach(btn => {
   });
 });
 
+/* ===== 검색 ===== */
+searchBtn.addEventListener("click", () => {
+  const keyword = searchInput.value.trim();
+
+  if (!keyword) {
+    alert("검색어를 입력해주세요!");
+    return;
+  }
+
+  const result = allPlaces.filter(place =>
+    place.title.includes(keyword)
+  );
+
+  renderList(result);
+});
+
+searchInput.addEventListener("keyup", (e) => {
+  if (e.key === "Enter") {
+    searchBtn.click();
+  }
+});
+
+/* ===== 초기 화면 ===== */
 renderList(monthData[6]);
 </script>
 

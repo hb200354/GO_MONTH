@@ -1,15 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="path" value="${pageContext.request.contextPath}" />
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>사이트 소개 | GO-MONTH</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>사이트 소개 | GO-MONTH</title>
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- 공통 CSS -->
-  <link href="css/styles.css" rel="stylesheet">
+<!-- 공통 CSS -->
+<link href="${path}/css/styles.css" rel="stylesheet">
 </head>
 
 <body>
@@ -19,7 +24,7 @@
 ======================= -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-relative">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="index.html">GO-MONTH</a>
+    <a class="navbar-brand fw-bold" href="${path}/">GO-MONTH</a>
 
     <button class="navbar-toggler" type="button"
             data-bs-toggle="collapse"
@@ -30,17 +35,16 @@
     <div class="collapse navbar-collapse justify-content-center"
          id="navbarSupportedContent">
       <ul class="navbar-nav position-lg-absolute start-50 translate-middle-x">
-        <li class="nav-item"><a class="nav-link" href="spring.html">봄</a></li>
-        <li class="nav-item"><a class="nav-link" href="summer.html">여름</a></li>
-        <li class="nav-item"><a class="nav-link" href="fall.html">가을</a></li>
-        <li class="nav-item"><a class="nav-link" href="winter.html">겨울</a></li>
-        <li class="nav-item"><a class="nav-link active" href="about.html">사이트 소개</a></li>
+        <li class="nav-item"><a class="nav-link" href="${path}/spring">봄</a></li>
+        <li class="nav-item"><a class="nav-link" href="${path}/summer">여름</a></li>
+        <li class="nav-item"><a class="nav-link" href="${path}/fall">가을</a></li>
+        <li class="nav-item"><a class="nav-link" href="${path}/winter">겨울</a></li>
+        <li class="nav-item"><a class="nav-link active" href="${path}/about">사이트 소개</a></li>
       </ul>
     </div>
 
-    <!-- 로그인 (추후 연동 예정) -->
     <div class="d-none d-lg-block">
-      <a class="btn btn-outline-light btn-login" href="login.html">로그인</a>
+      <a class="btn btn-outline-light btn-login" href="${path}/login">로그인</a>
     </div>
   </div>
 </nav>
@@ -180,4 +184,3 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-

@@ -37,10 +37,8 @@
       </ul>
     </div>
 
-    <div class="d-none d-lg-block" id="authArea">
+    <div class="d-none d-lg-block">
       <a class="btn btn-outline-light btn-login" href="login.html">로그인</a>
-</div>
-
     </div>
   </div>
 </nav>
@@ -51,7 +49,8 @@
 <section class="py-5">
   <div class="container">
     <div class="card">
-      <img src="../assets/images/placeholder.jpg"
+      <img id="detailImage"
+           src="imgs/summer-main.jpg"
            class="card-img-top featured-img"
            alt="대표 이미지">
     </div>
@@ -63,10 +62,10 @@
 ======================= -->
 <section class="pb-4">
   <div class="container">
-    <h2 class="fw-bold mb-3">여행지명</h2>
+    <h2 class="fw-bold mb-3" id="detailTitle">여행지명</h2>
     <ul class="list-unstyled">
-      <li>📍 위치: 텍스트를 입력해주세요</li>
-      <li>🗓 방문 가능 시기: 봄 / 여름 / 가을 / 겨울</li>
+      <li id="detailLocation">📍 위치:</li>
+      <li id="detailSeason">🗓 방문 가능 시기:</li>
     </ul>
   </div>
 </section>
@@ -79,11 +78,8 @@
 <section class="py-4">
   <div class="container">
     <h4 class="fw-bold mb-3">상세 설명</h4>
-    <ul>
-      <li>여행지 소개 텍스트를 입력해주세요.</li>
-      <li>추천 포인트를 입력해주세요.</li>
-      <li>교통 정보를 입력해주세요.</li>
-      <li>주변 관광지를 추천해주세요.</li>
+    <ul id="detailDesc">
+      <!-- JS로 채워짐 -->
     </ul>
   </div>
 </section>
@@ -91,7 +87,7 @@
 <hr>
 
 <!-- =======================
- ④ 추가 이미지 슬라이드
+ ④ 추가 이미지 슬라이드 (더미 유지)
 ======================= -->
 <section class="py-5 bg-light">
   <div class="container">
@@ -99,7 +95,8 @@
 
     <div class="position-relative">
       <div class="card">
-        <img src="../assets/images/placeholder.jpg"
+        <img id="detailSubImage"
+             src="imgs/summer1.jpg"
              class="card-img-top"
              alt="추가 이미지">
       </div>
@@ -144,8 +141,74 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../js/scripts.js"></script>
 
+<script>
+  // 🔹 쿼리스트링 id 받기
+  const params = new URLSearchParams(location.search);
+  const id = params.get("id");
+
+  // 🔹 상세 데이터 (더미)
+  const detailData = {
+    gangneung: {
+      title: "강릉 경포대",
+      img: "imgs/summer-main.jpg",
+      subImg: "imgs/summer1.jpg",
+      location: "강원도 강릉시",
+      season: "여름 (6~8월)",
+      desc: [
+        "강릉을 대표하는 여름 바다 여행지입니다.",
+        "해변과 산책로가 잘 조성되어 있습니다.",
+        "도심과 가까워 접근성이 좋습니다.",
+        "주변에 카페와 관광지가 많습니다."
+      ]
+    },
+    haeundae: {
+      title: "부산 해운대",
+      img: "imgs/summer1.jpg",
+      subImg: "imgs/summer4.jpg",
+      location: "부산광역시 해운대구",
+      season: "여름 (6~8월)",
+      desc: [
+        "국내에서 가장 유명한 해변 중 하나입니다.",
+        "여름철 다양한 축제가 열립니다.",
+        "야경과 먹거리가 풍부합니다.",
+        "대중교통 접근성이 뛰어납니다."
+      ]
+    },
+    hyupjae: {
+      title: "제주 협재해변",
+      img: "imgs/summer3.jpg",
+      subImg: "imgs/summer3.jpg",
+      location: "제주특별자치도 제주시",
+      season: "여름",
+      desc: [
+        "에메랄드빛 바다가 인상적인 제주 해변입니다.",
+        "수심이 얕아 가족 여행에 적합합니다.",
+        "한적한 분위기로 힐링이 가능합니다.",
+        "인근 관광지와 연계 여행이 좋습니다."
+      ]
+    }
+  };
+
+  const data = detailData[id];
+
+  if (data) {
+    document.getElementById("detailTitle").textContent = data.title;
+    document.getElementById("detailImage").src = data.img;
+    document.getElementById("detailSubImage").src = data.subImg;
+    document.getElementById("detailLocation").textContent = "📍 위치: " + data.location;
+    document.getElementById("detailSeason").textContent = "🗓 방문 가능 시기: " + data.season;
+
+    const descUl = document.getElementById("detailDesc");
+    descUl.innerHTML = "";
+    data.desc.forEach(text => {
+      const li = document.createElement("li");
+      li.textContent = text;
+      descUl.appendChild(li);
+    });
+  }
+</script>
 
 </body>
 </html>
+

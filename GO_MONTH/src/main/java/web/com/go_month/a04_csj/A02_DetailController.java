@@ -5,14 +5,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-	public class A01_summerController {
-		// http://localhost:5052/summer
-	
-		@GetMapping("summer")
+public class A02_DetailController {
+	// http://localhost:5052/detail
+		@GetMapping("detail")
 		public String main(Model d) {
-			return null;
 			
-//			return "a04_csj\\a01_summer";
+			return "a04_csj\\a02_detail";
 			
 		}
 	}
