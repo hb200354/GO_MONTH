@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 	
 		@GetMapping("summer")
 		public String main(Model d) {
-			return null;
+			//return null;
 			
-//			return "a04_csj\\a01_summer";
+			return "a04_csj\\a01_summer";
 			
 		}
 	}
