@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>가을 여행지 | GO-MONTH</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Common CSS -->
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- =======================
+ ① 네비게이션 바
+======================= -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark position-relative">
+  <div class="container">
+
+    <!-- 로고 (왼쪽) -->
+    <a class="navbar-brand fw-bold" href="index.html">GO-MONTH</a>
+
+    <!-- 모바일 토글 -->
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- 중앙 계절 네비게이션 -->
+    <div class="collapse navbar-collapse justify-content-center"
+         id="navbarSupportedContent">
+      <ul class="navbar-nav position-lg-absolute start-50 translate-middle-x">
+        <li class="nav-item">
+          <a class="nav-link" href="spring.html">봄</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="summer.html">여름</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="fall.html">가을</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="winter.html">겨울</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 로그인 버튼 (오른쪽) -->
+    <div class="d-none d-lg-block" id="authArea">
+  <a class="btn btn-outline-light btn-login" href="login.html">로그인</a>
+</div>
+
+    </div>
+
+  </div>
+</nav>
+
+<!-- =======================
+ ② 페이지 헤더
+======================= -->
+<header class="py-5 bg-light border-bottom mb-4">
+  <div class="container text-center my-5">
+    <h1 class="fw-bolder">가을에 떠나기 좋은 여행지</h1>
+    <p class="lead mb-0">
+      단풍과 트레킹, 감성 여행이 빛나는 계절 (9~11월)
+    </p>
+  </div>
+</header>
+
+<!-- =======================
+ ① 월별 필터 버튼
+======================= -->
+<section class="py-4">
+  <div class="container d-flex gap-2">
+    <button class="btn btn-dark btn-month active" data-month="9">9월</button>
+    <button class="btn btn-outline-dark btn-month" data-month="10">10월</button>
+    <button class="btn btn-outline-dark btn-month" data-month="11">11월</button>
+  </div>
+</section>
+
+<!-- =======================
+ ③ 페이지 콘텐츠
+======================= -->
+<div class="container">
+  <div class="row">
+
+    <!-- ③-1 메인 콘텐츠 -->
+    <div class="col-lg-8">
+
+      <!-- 대표 여행지 -->
+      <div class="card mb-4">
+        <img class="card-img-top featured-img"
+             src="assets/images/fall-main.jpg" alt="내장산 국립공원">
+        <div class="card-body">
+          <div class="small text-muted">AUTUMN PICK</div>
+          <h2 class="card-title">내장산 국립공원</h2>
+          <p class="card-text">
+            전국 최고의 단풍 명소로 손꼽히는 내장산.
+            가을에 가장 아름다운 풍경을 만날 수 있습니다.
+          </p>
+          <a class="btn btn-primary" href="detail.html">자세히 보기 →</a>
+        </div>
+      </div>
+
+      <!-- 여행지 카드 목록 -->
+      <div class="row">
+        <div class="col-lg-6">
+
+          <div class="card mb-4">
+            <img class="card-img-top" src="assets/images/fall1.jpg" alt="담양 메타세쿼이아길">
+            <div class="card-body">
+              <div class="small text-muted">가을 테마</div>
+              <h2 class="card-title h4">담양 메타세쿼이아길</h2>
+              <p class="card-text">
+                노랗게 물든 길을 따라 걷는
+                대표적인 가을 산책 코스.
+              </p>
+              <a class="btn btn-primary" href="detail.html">자세히 보기 →</a>
+            </div>
+          </div>
+
+          <div class="card mb-4">
+            <img class="card-img-top" src="assets/images/fall2.jpg" alt="안반데기">
+            <div class="card-body">
+              <div class="small text-muted">감성 여행</div>
+              <h2 class="card-title h4">강릉 안반데기</h2>
+              <p class="card-text">
+                가을 하늘과 어우러지는 고원 풍경.
+                사진 명소로 유명한 장소입니다.
+              </p>
+              <a class="btn btn-primary" href="detail.html">자세히 보기 →</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-lg-6">
+
+          <div class="card mb-4">
+            <img class="card-img-top" src="assets/images/fall3.jpg" alt="설악산">
+            <div class="card-body">
+              <div class="small text-muted">단풍 명소</div>
+              <h2 class="card-title h4">설악산</h2>
+              <p class="card-text">
+                가을이면 가장 먼저 단풍이 드는 산.
+                절경으로 손꼽히는 국립공원.
+              </p>
+              <a class="btn btn-primary" href="detail.html">자세히 보기 →</a>
+            </div>
+          </div>
+
+          <div class="card mb-4">
+            <img class="card-img-top" src="assets/images/fall4.jpg" alt="제주 오름">
+            <div class="card-body">
+              <div class="small text-muted">힐링 여행</div>
+              <h2 class="card-title h4">제주 오름</h2>
+              <p class="card-text">
+                선선한 가을 바람과 함께 걷기 좋은
+                제주도의 오름 여행.
+              </p>
+              <a class="btn btn-primary" href="detail.html">자세히 보기 →</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 페이지네이션 -->
+      <nav aria-label="Pagination">
+        <hr class="my-0" />
+        <ul class="pagination justify-content-center my-4">
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <!-- ③-2 사이드바 -->
+    <div class="col-lg-4">
+
+      <div class="card mb-4">
+        <div class="card-header">여행지 검색</div>
+        <div class="card-body">
+          <div class="input-group">
+            <input class="form-control" type="text" placeholder="여행지 검색">
+            <button class="btn btn-primary">검색</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-4">
+        <div class="card-header">가을 여행 테마</div>
+        <div class="card-body">
+          <ul class="list-unstyled mb-0">
+            <li>🍂 단풍 명소</li>
+            <li>🥾 트레킹</li>
+            <li>📸 감성 사진</li>
+            <li>☕ 가을 카페</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card mb-4">
+        <div class="card-header">가을 여행 한 줄 팁</div>
+        <div class="card-body">
+          아침·저녁 기온 차가 크니<br>
+          얇은 겉옷을 꼭 챙기세요 🍁
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- =======================
+ ④ 푸터
+======================= -->
+<footer class="py-5 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white">
+      Copyright © GO-MONTH 2025
+    </p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/scripts.js"></script>
+
+
+</body>
+</html>
