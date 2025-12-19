@@ -170,7 +170,7 @@ function renderList(list) {
   list.forEach(place => {
     placeList.innerHTML += `
       <div class="col-lg-6 mb-4">
-        <div class="card h-100">
+        <div class="card">
           <img src="\${place.img}" class="card-img-top">
           <div class="card-body">
             <h5 class="card-title">\${place.title}</h5>
