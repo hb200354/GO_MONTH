@@ -64,6 +64,8 @@
 
     <!-- 사이드바 -->
     <div class="col-lg-4">
+
+      <!-- 검색 -->
       <div class="card mb-4">
         <div class="card-header">여행지 검색</div>
         <div class="card-body">
@@ -72,6 +74,7 @@
         </div>
       </div>
 
+      <!-- 여름 여행 테마 -->
       <div class="card mb-4">
         <div class="card-header">여름 여행 테마</div>
         <div class="card-body">
@@ -83,8 +86,14 @@
           </ul>
         </div>
       </div>
-    </div>
 
+      <!-- ⭐ 월별 한 줄 팁 -->
+      <div class="card mb-4">
+        <div class="card-header">여름 여행 한 줄 팁</div>
+        <div class="card-body" id="tipBox"></div>
+      </div>
+
+    </div>
   </div>
 </div>
 
@@ -92,7 +101,7 @@
 
 <script>
 /* ======================
-   월별 데이터
+   월별 데이터 (한 줄 팁 포함)
 ====================== */
 const summerData = {
   6: {
@@ -101,6 +110,7 @@ const summerData = {
       title: "강릉 경포대",
       desc: "초여름에 가장 잘 어울리는 바다 여행지"
     },
+    tip: "6월은 아직 습도가 낮아 햇볕만 피하면 여행하기 가장 쾌적한 시기예요. 바다나 계곡은 오전 시간대를 추천해요 ☀️",
     list: [
       { title: "강릉 경포대", img: "${path}/imgs/summer-main.jpg", desc: "탁 트인 동해 바다" },
       { title: "부산 해운대", img: "${path}/imgs/summer1.jpg", desc: "여름 대표 해변" },
@@ -114,6 +124,7 @@ const summerData = {
       title: "부산 광안리",
       desc: "한여름 밤, 가장 빛나는 바다"
     },
+    tip: "7월에는 낮 기온이 높아지기 때문에 해 질 무렵이나 밤 여행 코스를 중심으로 움직이면 훨씬 시원해요 🌙",
     list: [
       { title: "부산 광안리", img: "${path}/imgs/20191229160530047_oen.jpg", desc: "야경 명소" },
       { title: "부산 해운대", img: "${path}/imgs/summer1.jpg", desc: "낮과 밤이 모두 아름다운 해변" },
@@ -127,6 +138,7 @@ const summerData = {
       title: "한강 야경",
       desc: "늦여름 밤, 도심 속 산책"
     },
+    tip: "8월에는 휴가철이 끝난 평일을 노리면 사람도 적고 여유로운 여행을 즐길 수 있어요 🍃",
     list: [
       { title: "한강 야경", img: "${path}/imgs/summer4.jpg", desc: "여름 밤 산책 코스" },
       { title: "부산 광안리", img: "${path}/imgs/20191229160530047_oen.jpg", desc: "밤바다 명소" },
@@ -145,6 +157,7 @@ const featuredDesc  = document.getElementById("featuredDesc");
 const placeList     = document.getElementById("placeList");
 const searchBtn     = document.getElementById("searchBtn");
 const searchInput   = document.getElementById("searchInput");
+const tipBox        = document.getElementById("tipBox");
 
 /* ===== 렌더 ===== */
 function renderMonth(month) {
@@ -154,6 +167,7 @@ function renderMonth(month) {
   featuredImg.src = data.featured.img;
   featuredTitle.innerText = data.featured.title;
   featuredDesc.innerText = data.featured.desc;
+  tipBox.innerText = data.tip;
 
   renderList(data.list);
 }
@@ -198,6 +212,5 @@ searchBtn.onclick = () => {
 /* ===== 초기 ===== */
 renderMonth(6);
 </script>
-
 </body>
 </html>
