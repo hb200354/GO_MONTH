@@ -1,0 +1,173 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"
+    import="java.util.*"
+    %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<c:set var="path" value="${pageContext.request.contextPath }"/>
+<fmt:requestEncoding value="UTF-8"/> 
+<!DOCTYPE html>
+<%--
+
+
+ --%>
+<html>
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GO-MONTH | 계절별 여행 가이드</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- 공통 CSS -->
+  <link href="${path}/css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- =======================
+ ① 상단 네비게이션 (로고 + 시즌 탭)
+======================= -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark position-relative">
+  <div class="container">
+ 
+
+
+    <!-- 로고 -->
+    <a class="navbar-brand fw-bold" href="index.html">GO-MONTH</a>
+
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- 시즌 메뉴 -->
+    <div class="collapse navbar-collapse justify-content-center"
+         id="navbarSupportedContent">
+      <ul class="navbar-nav position-lg-absolute start-50 translate-middle-x">
+        <li class="nav-item"><a class="nav-link" href="spring.html">봄</a></li>
+        <li class="nav-item"><a class="nav-link" href="summer.html">여름</a></li>
+        <li class="nav-item"><a class="nav-link" href="fall.html">가을</a></li>
+        <li class="nav-item"><a class="nav-link" href="winter.html">겨울</a></li>
+      </ul>
+    </div>
+
+    <!-- 로그인 -->
+
+  <div class="d-none d-lg-block" id="authArea">
+    <a class="btn btn-outline-light btn-login" href="login.html">로그인</a>
+</div>
+
+</div>
+
+
+
+  </div>
+</nav>
+
+<!-- =======================
+ ③ 배너 이미지 영역
+======================= -->
+<section class="banner-section">
+  <div class="container position-relative">
+
+    <div class="banner-box bg-light border">
+      <div class="banner-arrow left">&lt;</div>
+      <div class="banner-arrow right">&gt;</div>
+      <div class="banner-dots text-center mt-2">
+        ● ○ ○
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- =======================
+ ④ 사이트 소개 요약 섹션
+======================= -->
+<section class="py-5">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-3">사이트 소개 요약</h2>
+    <p class="mb-4">
+      GO-MONTH는 계절별로 가장 어울리는 여행지를 추천하는
+      계절 기반 여행 가이드 웹 서비스입니다.
+    </p>
+    <a href="about.html" class="btn btn-primary">
+      사이트 소개 자세히 보기 →
+    </a>
+  </div>
+</section>
+
+<!-- =======================
+ ⑤ 인기 여행지 TOP 3
+======================= -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5">인기 여행지 TOP 3</h2>
+
+    <div class="row g-4">
+
+      <!-- TOP 1 -->
+      <div class="col-md-4 text-center">
+        <div class="card h-100">
+          <img src="${path}/assets/images/placeholder.jpg" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">여행지 1</h5>
+            <p class="card-text">
+              텍스트를 입력해 주세요.<br>
+              텍스트를 입력해 주세요.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TOP 2 -->
+      <div class="col-md-4 text-center">
+        <div class="card h-100">
+          <img src="${path}/assets/images/placeholder.jpg" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">여행지 2</h5>
+            <p class="card-text">
+              텍스트를 입력해 주세요.<br>
+              텍스트를 입력해 주세요.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TOP 3 -->
+      <div class="col-md-4 text-center">
+        <div class="card h-100">
+          <img src="${path}/assets/images/placeholder.jpg" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">여행지 3</h5>
+            <p class="card-text">
+              텍스트를 입력해 주세요.<br>
+              텍스트를 입력해 주세요.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =======================
+ 푸터
+======================= -->
+<footer class="py-5 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white">
+      Copyright © GO-MONTH 2025
+    </p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="${path}/js/scripts.js"></script>
+
+</body>
+</html>
